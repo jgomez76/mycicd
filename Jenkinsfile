@@ -22,5 +22,7 @@ node ('built-in') {
     ])
 
     PIPELINE_REPO = scm.getRepositories()[0].getURIs()[0].toString()
-    println "PIPELINE REPO :: ${PIPELINE_REPO}"
+    PIPELINE_BRANCH = scm.getBranches()[0].getName().replace("*/","")
+    println "PIPELINE_REPO   :: ${PIPELINE_REPO}"
+    println "PIPELINE_BRANCH :: ${PIPELINE_BRANCH}"
 }
