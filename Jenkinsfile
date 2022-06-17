@@ -1,4 +1,4 @@
-node ('controller') {
+node ('built-in') {
     properties([
         parameters(
             booleanParam(name: 'DEBUG_ENABLED', defaultValue: false)
