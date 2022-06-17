@@ -1,4 +1,4 @@
-node('master') {
+node ('master') {
     properties([
         parameters(
             booleanParam(name: 'DEBUG_ENABLED', defaultValue: false)
