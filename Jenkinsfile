@@ -1,4 +1,4 @@
-node ('principal') {
+node ('controller') {
     properties([
         parameters(
             booleanParam(name: 'DEBUG_ENABLED', defaultValue: false)
