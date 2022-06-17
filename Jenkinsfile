@@ -1,7 +1,8 @@
 node ('built-in') {
     properties([
-        parameters(
+        parameters([
             booleanParam(name: 'DEBUG_ENABLED', defaultValue: false)
+        ]
         ),
         disableConcurrentBuilds(),
         buildDiscarder(logRotator(daysToKeepStr: '30')),
