@@ -2,8 +2,7 @@ node ('built-in') {
     properties([
         parameters([
             booleanParam(name: 'DEBUG_ENABLED', defaultValue: false)
-        ]
-        ),
+        ]),
         disableConcurrentBuilds(),
         buildDiscarder(logRotator(daysToKeepStr: '30')),
         pipelineTriggers([
@@ -21,4 +20,7 @@ node ('built-in') {
             ]
         ])
     ])
+
+    PIPELINE_REPO = scm.getRepositories()[0].getURIs()[0].toString()
+    println "PIPELINE REPO :: ${PIPELINE_REPO}"
 }
